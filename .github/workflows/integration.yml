@@ -39,9 +39,11 @@ jobs:
         docker-compose -f docker-compose.yml up -d
       working-directory: ./
 
+    - name: Export PYTHONPATH
+      run: echo "PYTHONPATH=src" >> $GITHUB_ENV
+    
     - name: Run integration tests
-      run: PYTHONPATH=src pipenv run pytest 
-      working-directory: ./
+      run: pipenv run pytest
 
     - name: Tear down services
       if: always()
