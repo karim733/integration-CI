@@ -40,7 +40,7 @@ jobs:
       working-directory: ./
 
     - name: Run integration tests
-      run: pipenv run pytest 
+      run: PYTHONPATH=src pipenv run pytest 
       working-directory: ./
 
     - name: Tear down services
