@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  add_service:
+    build:
+      context: ./src/add_service
+    ports:
+      - "5000:5000"
+    networks:
+      - calc-network
+
+  multiply_service:
+    build:
+      context: ./src/multiply_service
+    ports:
+      - "5001:5001"
+    networks:
+      - calc-network
+
+networks:
+  calc-network:
+    driver: bridge
