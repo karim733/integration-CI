@@ -43,8 +43,8 @@ jobs:
       run: echo "PYTHONPATH=src" >> $GITHUB_ENV
     
     - name: Run integration tests
-      run: pipenv run pytest
-
+      run: pipenv run pytest tests/integration
+    
     - name: Tear down services
       if: always()
       run: docker-compose down
