@@ -1,4 +1,4 @@
-name: Multi-Container Integration Test
+name: Multi-Container Full Test
 
 on: [push, pull_request]
 
