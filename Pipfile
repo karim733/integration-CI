@@ -8,6 +8,7 @@ pytest = "*"
 exceptiongroup = "*"
 requests = "*"
 fastapi = "*"
+httpx = "*"
 
 [dev-packages]
 
